@@ -1,1 +1,1 @@
-Program mający pomóc w różnych obliczeniach astrofizycznych
+Program mający pomóc w różnych obliczeniach astrofizycznych i innych dotyczących fizyki
