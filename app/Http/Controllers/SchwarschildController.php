@@ -20,16 +20,18 @@ class SchwarschildController extends Controller
         if ($save) {
 
             $validator = Validator::make($request->all(), [
-                'length' => 'required|int',
+                'length' => 'required|int|max:1999999999',
             ]);
 
             if ($validator->fails()) {
+
                 $validated = $validator->errors()->all();
-                return view("schawrzschild", ["length" => $length, 'errorforms' => implode(", ", $validated)]);
+                return view("schawrzschild", ["length" => $length, 'errorforms' => implode(", ", $validated), "calco" => []]);
             } else {
                 $validated = $validator->validated();
 
                 $m = ($validated['length'] * $this->c * $this->c) / ($this->g * 2);
+                $calco['km'] = $validated['length'] / 1000;
                 $calco['m'] = $m;
                 $density = ($validated['length'] * $validated['length'] * $validated['length'] * pi() * 4) / 3;
                 $calco['density'] = $m / $density;

@@ -3,6 +3,9 @@
 
 <a href="/" class=" btn btn-primary"> Strona główna</button></a>
 <h3>Promień Swartchilda</h3>
+Liczy dla wielkości : 1 999 999 km<br />
+
+
 
 @if (isset($errorforms) && $errorforms != "")
 <div class="alert alert-danger" role="alert">
@@ -27,9 +30,11 @@
 
     @if ($calco)
     <h4>Obliczenia</h4>
+    Kilometr : {{$calco['km']}} km<br />
     Masa : {{$calco['m']}} kg<br />
     Gęstość : {{$calco['density']}} kg / m3 <br />
     @endif
 </div>
+
 
 @endsection('content')

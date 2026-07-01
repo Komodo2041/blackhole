@@ -9,4 +9,10 @@
    <a href="/schwarschild"><button type="button" class="btn btn-primary">Promień Schwarzschilda</button></a>
 </div>
 
+
+<div>
+   <br />
+   Hipoteza SLABs (Ogromniaste Czarne Dziury) [Nikodem Popławski]?
+</div>
+
 @endsection('content')
