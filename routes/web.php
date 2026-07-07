@@ -9,3 +9,5 @@ Route::match(["get", "post"], '/rotation', "App\Http\Controllers\RotationControl
 Route::match(["get", "post"], '/falling', "App\Http\Controllers\FallingController@list");
 
 Route::match(["get", "post"], '/schwarschild', "App\Http\Controllers\SchwarschildController@list");
+
+Route::match(["get", "post"], '/magnus', "App\Http\Controllers\MagnusController@list");

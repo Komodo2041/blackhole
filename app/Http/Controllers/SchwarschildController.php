@@ -20,7 +20,7 @@ class SchwarschildController extends Controller
         if ($save) {
 
             $validator = Validator::make($request->all(), [
-                'length' => 'required|int|max:1999999999',
+                'length' => 'required|int|max:1999999999|min:1',
             ]);
 
             if ($validator->fails()) {
