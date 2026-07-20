@@ -2,7 +2,7 @@
 @section('content')
 
 <a href="/" class=" btn btn-primary"> Strona główna</button></a>
-<h3>Pojedyńczy walec</h3>
+<h3>Pojedyńczy @if ($f == 1) Walec @else Stożek @endif</h3>
 
 @if (isset($errorforms) && $errorforms != "")
 <div class="alert alert-danger" role="alert">

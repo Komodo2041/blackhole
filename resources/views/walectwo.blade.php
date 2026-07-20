@@ -2,7 +2,7 @@
 @section('content')
 
 <a href="/" class=" btn btn-primary"> Strona główna</button></a>
-<h3>Pojedyńczy walec</h3>
+<h3>2 * @if ($f == 1) Walec @else Stożek @endif</h3>
 
 @if (isset($errorforms) && $errorforms != "")
 <div class="alert alert-danger" role="alert">
@@ -13,7 +13,7 @@
 <div class="container">
     <form action="" method="Post">
         @csrf
-        <h4>Pierwszy walec</h4>
+        <h4>Pierwszy @if ($f == 1) Walec @else Stożek @endif</h4>
         <div class="form-group">
             <label>Promień (mm)</label>
             <input type="text" name="radius1" class="form-control" placeholder="Promień" value="{{$radius1}}">
@@ -22,7 +22,7 @@
             <label>Wyskość (mm)</label>
             <input type="text" name="height1" class="form-control" placeholder="Wysokość" value="{{$height1}}">
         </div>
-        <h4>Drugi walec</h4>
+        <h4>Drugi @if ($f == 1) Walec @else Stożek @endif</h4>
         <div class="form-group">
             <label>Promień (mm)</label>
             <input type="text" name="radius2" class="form-control" placeholder="Promień" value="{{$radius2}}">
@@ -41,8 +41,9 @@
 
     @if ($calco)
     <h4>Obliczenia</h4>
-    1 walec : {{$calco['v1']}} Litr<br />
-    2 walec : {{$calco['v2']}} Litr<br />
+    1 @if ($f == 1) Walec @else Stożek @endif : {{$calco['v1']}} Litr<br />
+    2 @if ($f == 1) Walec @else Stożek @endif : {{$calco['v2']}} Litr<br />
+    Łącznie: {{$calco['sum']}} Litr<br />
     @endif
 </div>
 
