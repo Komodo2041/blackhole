@@ -9,6 +9,7 @@
    <a href="/schwarschild"><button type="button" class="btn btn-primary">Promień Schwarzschilda</button></a>
    <a href="/magnus"><button type="button" class="btn btn-primary">Siła magnusa</button></a>
    <a href="/donkey"><button type="button" class="btn btn-primary">Karawana osłów</button></a>
+   <a href="/walecone"><button type="button" class="btn btn-primary">1 Walec pojemność</button></a>
 </div>
 
 
