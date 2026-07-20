@@ -15,3 +15,4 @@ Route::match(["get", "post"], '/magnus', "App\Http\Controllers\MagnusController@
 Route::match(["get", "post"], '/donkey', "App\Http\Controllers\DonkeyController@list");
 
 Route::match(["get", "post"], '/walecone', "App\Http\Controllers\LiterController@walecOne");
+Route::match(["get", "post"], '/walectwo', "App\Http\Controllers\LiterController@walecTwo");

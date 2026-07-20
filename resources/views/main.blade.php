@@ -10,6 +10,7 @@
    <a href="/magnus"><button type="button" class="btn btn-primary">Siła magnusa</button></a>
    <a href="/donkey"><button type="button" class="btn btn-primary">Karawana osłów</button></a>
    <a href="/walecone"><button type="button" class="btn btn-primary">1 Walec pojemność</button></a>
+   <a href="/walectwo"><button type="button" class="btn btn-primary">2 Walce pojemność</button></a>
 </div>
 
 

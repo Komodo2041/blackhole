@@ -39,4 +39,41 @@ class LiterController extends Controller
         $dm3 = 100 * 100 * 100;
         return round($v / $dm3, 2);
     }
+
+    public function walecTwo(Request $request)
+    {
+        $radius1 = $request->input('radius1', 0);
+        $height1 = $request->input('height1', 0);
+        $radius2 = $request->input('radius2', 0);
+        $height2 = $request->input('height2', 0);
+        $save =  $request->input('save');
+        if ($save) {
+
+            $validator = Validator::make($request->all(), [
+                'radius1' => 'required|int',
+                'height1' => 'required|int',
+                'radius2' => 'required|int',
+                'height2' => 'required|int',
+            ]);
+
+            if ($validator->fails()) {
+                $validated = $validator->errors()->all();
+                return view("walectwo", ["height1" => $height1, "radius1" => $radius1, "height2" => $height2, "radius2" => $radius2, 'errorforms' => implode(", ", $validated), "calco" => []]);
+            } else {
+                $validated = $validator->validated();
+
+                $calco['v1'] = $this->calcVolumeRoller($radius1, $height1);
+                $calco['v2'] = $this->calcVolumeRoller($radius2, $height2);
+
+                return view("walectwo", [
+                    "height1" => $validated['height1'],
+                    "radius1" => $validated['radius1'],
+                    "height2" => $validated['height2'],
+                    "radius2" => $validated['radius2'],
+                    "calco" => $calco
+                ]);
+            }
+        }
+        return view("walectwo", ["height1" => $height1, "radius1" => $radius1, "height2" => $height2, "radius2" => $radius2, "calco" => []]);
+    }
 }
