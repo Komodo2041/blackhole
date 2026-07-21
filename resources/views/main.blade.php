@@ -13,6 +13,7 @@
    <a href="/walectwo"><button type="button" class="btn btn-primary">2 Walce pojemność</button></a>
    <a href="/stozekcone"><button type="button" class="btn btn-primary">1 Stożek pojemność</button></a>
    <a href="/stozektwo"><button type="button" class="btn btn-primary">2 Stożki pojemność (Ścięty stożek)</button></a>
+   <a href="/sinus"><button type="button" class="btn btn-primary">Tanges</button></a>
 </div>
 
 
