@@ -2,7 +2,8 @@
 @section('content')
 
 <a href="/" class=" btn btn-primary"> Strona główna</button></a>
-<h3>Rotacje</h3>
+<h3>{{$path}}
+</h3>
 
 @if (isset($errorforms) && $errorforms != "")
 <div class="alert alert-danger" role="alert">

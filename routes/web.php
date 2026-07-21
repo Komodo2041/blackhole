@@ -19,4 +19,7 @@ Route::match(["get", "post"], '/walectwo', "App\Http\Controllers\LiterController
 Route::match(["get", "post"], '/stozekcone', "App\Http\Controllers\LiterController@stozekcOne");
 Route::match(["get", "post"], '/stozektwo', "App\Http\Controllers\LiterController@stozekTwo");
 
+Route::match(["get", "post"], '/tanges', "App\Http\Controllers\SinusController@list");
 Route::match(["get", "post"], '/sinus', "App\Http\Controllers\SinusController@list");
+Route::match(["get", "post"], '/cosinus', "App\Http\Controllers\SinusController@list");
+Route::match(["get", "post"], '/ctg', "App\Http\Controllers\SinusController@list");
