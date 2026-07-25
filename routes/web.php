@@ -23,3 +23,5 @@ Route::match(["get", "post"], '/tanges', "App\Http\Controllers\SinusController@l
 Route::match(["get", "post"], '/sinus', "App\Http\Controllers\SinusController@list");
 Route::match(["get", "post"], '/cosinus', "App\Http\Controllers\SinusController@list");
 Route::match(["get", "post"], '/ctg', "App\Http\Controllers\SinusController@list");
+
+Route::match(["get", "post"], '/unitmol', "App\Http\Controllers\UnitMolController@list");
