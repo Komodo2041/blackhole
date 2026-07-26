@@ -31,6 +31,16 @@
     @if ($calco)
     <h4>Obliczenia</h4>
     Energia - eV : {{$calco['res']}} eV<br />
+    @if ($calco['p'])
+    Przekroczono barierę
+    @else
+    Brak przekroczenia
+    @endif
+    <br />
+    @if ($calco['p'] == 0)
+    Potrzebne unity: {{$calco['needm']}} u<br />
+    Potrzebna prędkość: {{$calco['needs']}} m/s <br />
+    @endif
 
     @endif
 </div>

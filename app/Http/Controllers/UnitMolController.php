@@ -11,6 +11,8 @@ class UnitMolController extends Controller
     private $unit_kg = 1.66e-27;
     private $electrov = 1.602e-19;
 
+    private $elctroProg = 0.05;
+
     public function list(Request $request)
     {
         $unit = $request->input('unit', 0);
@@ -32,6 +34,16 @@ class UnitMolController extends Controller
                 $masa = $validated['unit'] * $this->unit_kg;
                 $mk = ($validated['speed'] * $validated['speed'] * $masa) / 2;
                 $calco['res'] =  $mk / $this->electrov;
+                $calco['p'] = 0;
+                if ($calco['res'] >= $this->elctroProg) {
+                    $calco['p'] = 1;
+                }
+                if ($calco['p'] == 0) {
+                    $diff = $this->elctroProg / $calco['res'];
+                    $calco['needm'] = $diff * $validated['unit'];
+                    $calco['needs'] = ($this->elctroProg * $this->electrov * 2) / $masa;
+                    $calco['needs'] = sqrt($calco['needs']);
+                }
 
                 return view("unitmol", ["unit" => $validated['unit'], "speed" => $validated['speed'], "calco" => $calco]);
             }
