@@ -21,7 +21,7 @@
 
    <a href="/unitmol"><button type="button" class="btn btn-primary">Unity Energia Kinetyczna</button></a>
    <a href="/drogaswobodna"><button type="button" class="btn btn-primary">Droga swobodna (dystans)</button></a>
-
+   <a href="/drogaswobodna2"><button type="button" class="btn btn-primary">Droga swobodna (ciśnienie)</button></a>
 
 
 </div>

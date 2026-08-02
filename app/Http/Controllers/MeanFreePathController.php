@@ -35,4 +35,30 @@ class MeanFreePathController extends Controller
         }
         return view("pascal", ["pa" => $pa, "calco" => []]);
     }
+
+    public function calcPasc(Request $request)
+    {
+        $pa = $request->input('pascal', 0);
+
+        $save =  $request->input('save');
+        if ($save) {
+
+            $validator = Validator::make($request->all(), [
+                'pa' => 'required|numeric',
+            ]);
+
+            if ($validator->fails()) {
+                $validated = $validator->errors()->all();
+                return view("pascal2", ["pa" => $pa, 'errorforms' => implode(", ", $validated)]);
+            } else {
+                $validated = $validator->validated();
+
+                $calco['res'] = $this->indAir / $validated['pa'];
+                $calco['res'] *= 1000;
+
+                return view("pascal2", ["pa" => $validated['pa'], "calco" => $calco]);
+            }
+        }
+        return view("pascal2", ["pa" => $pa, "calco" => []]);
+    }
 }

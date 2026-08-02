@@ -27,3 +27,4 @@ Route::match(["get", "post"], '/ctg', "App\Http\Controllers\SinusController@list
 Route::match(["get", "post"], '/unitmol', "App\Http\Controllers\UnitMolController@list");
 
 Route::match(["get", "post"], '/drogaswobodna', "App\Http\Controllers\MeanFreePathController@calcDist");
+Route::match(["get", "post"], '/drogaswobodna2', "App\Http\Controllers\MeanFreePathController@calcPasc");
