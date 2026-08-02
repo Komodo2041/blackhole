@@ -33,6 +33,9 @@
     <h4>Obliczenia</h4>
     Długość (Metry): {{$calco['dist']}} m<br />
     Długość (Milimetry): {{$calco['dist2']}} (mm)<br />
+    -20 Stopni<br />
+    Długość (Metry): {{$calco['minus20dist']}} m<br />
+    Długość (Milimetry): {{$calco['minus20dist2']}} (mm)<br />
     @endif
 </div>
 

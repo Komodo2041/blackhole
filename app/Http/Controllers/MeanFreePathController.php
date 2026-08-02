@@ -9,6 +9,7 @@ class MeanFreePathController extends Controller
 {
 
     private $indAir = 6.6e-3;
+    private $indAirMinus20 = 5.7e-3;
 
     public function calcDist(Request $request)
     {
@@ -29,6 +30,9 @@ class MeanFreePathController extends Controller
 
                 $calco['dist'] = $this->indAir / $validated['pa'];
                 $calco['dist2'] = $calco['dist'] * 1000;
+
+                $calco['minus20dist'] = $this->indAirMinus20 / $validated['pa'];
+                $calco['minus20dist2'] = $calco['minus20dist'] * 1000;
 
                 return view("pascal", ["pa" => $validated['pa'], "calco" => $calco]);
             }
@@ -55,6 +59,9 @@ class MeanFreePathController extends Controller
 
                 $calco['res'] = $this->indAir / $validated['pa'];
                 $calco['res'] *= 1000;
+
+                $calco['res2'] = $this->indAirMinus20 / $validated['pa'];
+                $calco['res2'] *= 1000;
 
                 return view("pascal2", ["pa" => $validated['pa'], "calco" => $calco]);
             }

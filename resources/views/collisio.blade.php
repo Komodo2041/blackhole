@@ -2,11 +2,7 @@
 @section('content')
 
 <a href="/" class=" btn btn-primary"> Strona główna</button></a>
-<h3>Droga swobodna</h3>
-
-<p>
-    (1 atm): Wynosi dokładnie 101 325 Pa
-</p>
+<h3>Zderzenie cząstek - liczenie strat energi</h3>
 
 @if (isset($errorforms) && $errorforms != "")
 <div class="alert alert-danger" role="alert">
@@ -18,10 +14,13 @@
     <form action="" method="Post">
         @csrf
         <div class="form-group">
-            <label>Dystans (mm)</label>
-            <input type="text" name="pa" class="form-control" placeholder="Dystans" value="{{$pa}}">
+            <label>Masa pierwszej cząstki (unit)</label>
+            <input type="text" name="m1" class="form-control" placeholder="masa" value="{{$m1}}">
         </div>
-
+        <div class="form-group">
+            <label>Masa drugiej cząstki (unit)</label>
+            <input type="text" name="m2" class="form-control" placeholder="masa" value="{{$m2}}">
+        </div>
         <div class="form-group">
             <input type="hidden" value="1" name="save" />
 
@@ -31,9 +30,9 @@
 
     @if ($calco)
     <h4>Obliczenia</h4>
-    Ciśnienie: {{$calco['res']}} Pa<br />
-    - 20 stopni<br />
-    Ciśnienie: {{$calco['res2']}} Pa<br />
+    Strata : {{$calco['res']}}<br />
+    Procent : {{$calco['proc']}} %<br />
+    10 zderzeń : {{$calco['c10']}}
     @endif
 </div>
 
