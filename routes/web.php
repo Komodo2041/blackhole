@@ -30,3 +30,5 @@ Route::match(["get", "post"], '/drogaswobodna', "App\Http\Controllers\MeanFreePa
 Route::match(["get", "post"], '/drogaswobodna2', "App\Http\Controllers\MeanFreePathController@calcPasc");
 
 Route::match(["get", "post"], '/collision', "App\Http\Controllers\CollisionController@lossEnergy");
+Route::match(["get", "post"], '/colno', "App\Http\Controllers\CollisionController@lossEnergyNO");
+Route::match(["get", "post"], '/nrcol', "App\Http\Controllers\CollisionController@nrcol");

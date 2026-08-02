@@ -23,7 +23,8 @@
    <a href="/drogaswobodna"><button type="button" class="btn btn-primary">Droga swobodna (dystans)</button></a>
    <a href="/drogaswobodna2"><button type="button" class="btn btn-primary">Droga swobodna (ciśnienie)</button></a>
    <a href="/collision"><button type="button" class="btn btn-primary">Zderzenie cząstek</button></a>
-
+   <a href="/colno"><button type="button" class="btn btn-primary">Zderzenie cząstek (Azot|Tlen)</button></a>
+   <a href="/nrcol"><button type="button" class="btn btn-primary">Liczba zderzeń do wyhamowania</button></a>
 </div>
 
 
