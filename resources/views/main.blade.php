@@ -17,7 +17,13 @@
    <a href="/sinus"><button type="button" class="btn btn-primary">Sinus</button></a>
    <a href="/cosinus"><button type="button" class="btn btn-primary">Cosinus</button></a>
    <a href="/ctg"><button type="button" class="btn btn-primary">Cotanges</button></a><br /><br />
+
+
    <a href="/unitmol"><button type="button" class="btn btn-primary">Unity Energia Kinetyczna</button></a>
+   <a href="/drogaswobodna"><button type="button" class="btn btn-primary">Droga swobodna (dystans)</button></a>
+
+
+
 </div>
 
 
