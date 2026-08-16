@@ -43,18 +43,22 @@ class JoinCalcoController extends Controller
                 $calco['proc1_o'] = $this->colso($validated['unit1'], 32);
                 $calco['proc1_n'] = $this->colso($validated['unit1'], 28);
                 $calco['proc1_h'] = $this->colso($validated['unit1'], 4);
+                $calco['proc1_w'] = $this->colso($validated['unit1'], 2);
 
                 $calco['proc2_o'] = $this->colso($validated['unit2'], 32);
                 $calco['proc2_n'] = $this->colso($validated['unit2'], 28);
                 $calco['proc2_h'] = $this->colso($validated['unit2'], 4);
+                $calco['proc2_w'] = $this->colso($validated['unit2'], 2);
 
                 $calco['z1_o'] = $this->ept < $calco['en1'] ? log($this->ept / $calco['en1']) / log($calco['proc1_o']) : "NONE";
                 $calco['z1_n'] = $this->ept < $calco['en1'] ? log($this->ept / $calco['en1']) / log($calco['proc1_n']) : "NONE";
                 $calco['z1_h'] = $this->ept < $calco['en1'] ? log($this->ept / $calco['en1']) / log($calco['proc1_h']) : "NONE";
+                $calco['z1_w'] = $this->ept < $calco['en1'] ? log($this->ept / $calco['en1']) / log($calco['proc1_w']) : "NONE";
 
                 $calco['z2_o'] = $this->ept < $calco['en2'] ? log($this->ept / $calco['en2']) / log($calco['proc2_o']) : "NONE";
                 $calco['z2_n'] = $this->ept < $calco['en2'] ? log($this->ept / $calco['en2']) / log($calco['proc2_n']) : "NONE";
                 $calco['z2_h'] = $this->ept < $calco['en2'] ? log($this->ept / $calco['en2']) / log($calco['proc2_h']) : "NONE";
+                $calco['z2_w'] = $this->ept < $calco['en2'] ? log($this->ept / $calco['en2']) / log($calco['proc2_w']) : "NONE";
 
                 return view("joinCalco", ["unit1" => $validated['unit1'], "unit2" => $validated['unit2'], "speed" => $validated['speed'], "calco" => $calco]);
             }

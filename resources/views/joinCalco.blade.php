@@ -40,32 +40,46 @@
     ZW1 Strata O2 : {{$calco['proc1_o']}} %<br />
     ZW1 Strata N2 : {{$calco['proc1_n']}} %<br />
     ZW1 Strata He : {{$calco['proc1_h']}} %<br />
+    ZW1 Strata Wodór : {{$calco['proc1_w']}} %<br />
 
     ZW2 Strata O2 : {{$calco['proc2_o']}} %<br />
     ZW2 Strata N2 : {{$calco['proc2_n']}} %<br />
-    ZW2 Strata He : {{$calco['proc2_h']}} %<br /><br />
+    ZW2 Strata He : {{$calco['proc2_h']}} %<br />
+    ZW2 Strata Wodór : {{$calco['proc2_w']}} %<br />
+    <br />
 
     <table class="table">
         <tr>
             <th></th>
             <th>Związek 1</th>
             <th>Związek 2</th>
+            <th>Diff</th>
         </tr>
         <tr>
             <td>O2</td>
             <td>{{$calco['z1_o']}}</td>
             <td>{{$calco['z2_o']}}</td>
+            <td> @if ($calco['z2_o'] != "NONE" && $calco['z1_o'] != "NONE") {{$calco['z2_o'] / $calco['z1_o']  }} @endif</td>
         </tr>
         <tr>
             <td>N2</td>
             <td>{{$calco['z1_n']}}</td>
             <td>{{$calco['z2_n']}}</td>
+            <td>@if ($calco['z2_n'] != "NONE" && $calco['z1_n'] != "NONE") {{$calco['z2_n'] / $calco['z1_n']  }} @endif</td>
         </tr>
         <tr>
             <td>He</td>
             <td>{{$calco['z1_h']}}</td>
             <td>{{$calco['z2_h']}}</td>
+            <td>@if ($calco['z2_h'] != "NONE" && $calco['z1_h'] != "NONE") {{$calco['z2_h'] / $calco['z1_h']  }} @endif</td>
         </tr>
+        <tr>
+            <td>Wodór</td>
+            <td>{{$calco['z1_w']}}</td>
+            <td>{{$calco['z2_w']}}</td>
+            <td>@if ($calco['z2_w'] != "NONE" && $calco['z1_w'] != "NONE") {{$calco['z2_w'] / $calco['z1_w']  }} @endif</td>
+        </tr>
+
     </table>
     @endif
 </div>
