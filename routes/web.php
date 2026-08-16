@@ -34,3 +34,5 @@ Route::match(["get", "post"], '/colno', "App\Http\Controllers\CollisionControlle
 Route::match(["get", "post"], '/nrcol', "App\Http\Controllers\CollisionController@nrcol");
 
 Route::match(["get", "post"], '/joinspeed', "App\Http\Controllers\JoinSpeedController@list");
+
+Route::match(["get", "post"], '/joincalco', "App\Http\Controllers\JoinCalcoController@list");

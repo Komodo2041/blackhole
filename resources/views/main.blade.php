@@ -26,6 +26,8 @@
    <a href="/colno"><button type="button" class="btn btn-primary">Zderzenie cząstek (Azot|Tlen)</button></a>
    <a href="/nrcol"><button type="button" class="btn btn-primary">Liczba zderzeń do wyhamowania</button></a>
    <a href="/joinspeed"><button type="button" class="btn btn-primary">Łączenie prędkości</button></a>
+
+   <a href="/joincalco"><button type="button" class="btn btn-primary">Wiele obliczeń na raz</button></a>
 </div>
 
 
